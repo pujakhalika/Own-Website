@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
   --header-height: 3rem;
-  --hue-color: 350;
+  --hue-color: 10;
   --first-color: hsl(var(--hue-color), 69%, 45%);
   --first-color-second: hsl(var(--hue-color), 69%, 45%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -12,7 +12,7 @@
   --text-color-light-footer: hsl(var(--hue-color), 16%, 95%);
   --input--color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: rgb(206, 126, 126);
+  --container-color: rgb(187, 194, 206);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
   --body-font: 'Poppins', sans-serif;
@@ -694,7 +694,7 @@ img {
 }
 
 .skills__js {
-  width: 70%;
+  width: 60%;
 }
 
 .skills__bootstrap {
@@ -702,35 +702,71 @@ img {
 }
 
 .skills__vue {
+  width: 40%;
+}
+
+.skills__cplusplus {
   width: 50%;
 }
 
-.skills__php {
-  width: 80%;
-}
-
-.skills__laravel {
-  width: 80%;
+.skills__python {
+  width: 30%;
 }
 
 .skills__node {
   width: 50%;
 }
 
-.skills__codeigniter {
-  width: 80%;
+.skills__nuxtjs {
+  width: 30%;
 }
 
 .skills__flutter {
   width: 70%;
 }
 
+.skills__dart {
+  width: 70%;
+}
+
+.skills__materialdesign {
+  width: 50%;
+}
+
 .skills__figma {
+  width: 50%;
+}
+
+.skills__riveanimation {
+  width: 70%;
+}
+
+.skills__yoastseo {
   width: 40%;
 }
 
-.skills__photoshop {
-  width: 50%;
+.skills__ubersuggest {
+  width: 80%;
+}
+
+.skills__grammarly {
+  width: 90%;
+}
+
+.skills__whiteboard {
+  width: 85%;
+}
+
+.skills__kbbi {
+  width: 70%;
+}
+
+.skills__notes {
+  width: 100%;
+}
+
+.skills__katalon {
+  width: 60%;
 }
 
 .skills__close .skills__list {
@@ -1007,7 +1043,7 @@ img {
 }
 
 .project__bg {
-  background-color: var(--first-color-second);
+  background-color: white;
   padding-top: 3rem;
 }
 
@@ -1022,53 +1058,19 @@ img {
 
 .project__title,
 .project__description {
-  color: #fff;
+
+  color: black;
+}
+
+.blockquote {
+  color: black;
 }
 
 .project__img {
-  width: 250px;
+  width: 400px;
   -ms-grid-column-align: center;
       justify-self: center;
       object-fit: contain;
-}
-
-.testimonial__data,
-.testimonial__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.testimonial__data {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: var(--mb-1);
-}
-
-.testimonial__img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: var(--mb-0-75);
-}
-
-.testimonial__name {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-.testimonial__client {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-
-.testimonial__description {
-  margin-bottom: var(--mb-2-5);
-}
-
-.testimonial__icon-star {
-  color: var(--first-color);
 }
 
 .swiper-container .swiper-pagination-testimonial {
@@ -1077,7 +1079,7 @@ img {
 
 .alert {
   padding: 20px;
-  background-color: #f44336;
+  background-color: #e62e2e;
   color: white;
   opacity: 1;
   -webkit-transition: opacity 0.6s;
@@ -1437,7 +1439,7 @@ img {
     background: none;
   }
   .project__container {
-    background-color: var(--first-color-second);
+    background-color: white;
     border-radius: 1rem;
     padding: 3rem 2.5rem 0;
     -ms-grid-columns: 1fr max-content;
@@ -1492,73 +1494,6 @@ img {
   }
 }
 
-.preload {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: #0882c4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-.cloud1, .cloud2, .cloud3 {
-  height: 100px;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
-
-.cloud1 {
-  top: 25%;
-  -webkit-transform: translate(100%, -25%);
-          transform: translate(100%, -25%);
-  -webkit-animation: clouds 3s ease infinite;
-          animation: clouds 3s ease infinite;
-}
-
-.cloud2 {
-  top: 50%;
-  -webkit-transform: translate(100%, -50%);
-          transform: translate(100%, -50%);
-  -webkit-animation: clouds 3s ease infinite 2s;
-          animation: clouds 3s ease infinite 2s;
-}
-
-.cloud3 {
-  top: 75%;
-  -webkit-transform: translate(100%, -75%);
-          transform: translate(100%, -75%);
-  -webkit-animation: clouds 3s ease infinite 1.5s;
-          animation: clouds 3s ease infinite 1.5s;
-}
-
-.airplane {
-  height: 200px;
-  -webkit-animation: airplane 1s ease infinite alternate;
-          animation: airplane 1s ease infinite alternate;
-}
-
-.preload h3 {
-  position: absolute;
-  top: 75%;
-  -webkit-transform: translateY(-75%);
-          transform: translateY(-75%);
-  color: white;
-  font-size: 20px;
-  font-family: sans-serif;
-}
 
 @-webkit-keyframes airplane {
   from {
