@@ -203,20 +203,17 @@ $(window).on('load', function() {
 // End Preloader
 
 // Submit Contact Form
-const scriptURL = 'https://script.google.com/macros/s/AKfycbylzoD2fGjvN0rjf9BPCrhKg6hPrc--v3b640HruuC_yY9HvfVl6vZAxsCnmjm_dYUH/exec'
-const form = document.forms['puja-contact-form'];
 const btnSend = document.querySelector('.btn-send');
 const btnLoading = document.querySelector('.btn-loading');
 const contactAlert = document.querySelector('.contact-alert');
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    // when button submit has click
-    // visible button loading, disabled button send
-    btnLoading.classList.toggle('d-none-btn-form');
-    btnSend.classList.toggle('d-none-btn-form');
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => {
+function SendMail() {
+    var params = {
+        from_name : document.getElementById("contact__name").value,
+        email_id : document.getElementById("contact__email").value,
+        message : document.getElementById("contact__message").value
+    }
+    emailjs.send("service_puja_contact", "template_puja", params).then(function (res) {
         // visible button send, disabled button loading
         btnLoading.classList.toggle('d-none-btn-form');
         btnSend.classList.toggle('d-none-btn-form');
@@ -224,10 +221,11 @@ form.addEventListener('submit', e => {
         contactAlert.classList.toggle('d-none-alert');
         // reset form
         form.reset();
-        console.log('Success!', response)
+        console.log('Success!', response);
     })
-    .catch(error => {console.error('Error!', error.message)})
-})
+    .catch(error => {console.error('Error!', error.message)});
+}
+
 // End Submit Contact Form
 
 // Close Alert
