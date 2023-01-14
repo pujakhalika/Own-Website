@@ -950,13 +950,12 @@
                         </div>
                     </div>
                 </div>
-
+                <form class="contact__form grid">
                     <div class="alert success contact-alert d-none-alert">
                         <span class="closebtn">&times;</span>
                         <strong>Arigatou!</strong> Saya akan membalas pesan anda pada waktu yang tidak dapat ditentukan (Slow Response). Kirim pesan WhatsApp untuk fast response yang tertera pada website ini
                     </div>
-                    
-                <form class="contact__form grid">
+
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="contact__name" class="contact__label">Name</label>
@@ -972,7 +971,8 @@
                         <textarea id="contact__message" name="message" cols="0" rows="7"
                             class="contact__input"></textarea>
                     </div>
-
+                </form>
+                
                     <div>
                         <button onclick="SendMail()" class="button button--flex--form btn-send">
                             Send Message
@@ -984,7 +984,6 @@
                             <i class="uil uil-spinner-alt button__icon"></i>
                         </button>
                     </div>
-                </form>
             </div>
         </section>
     </main>
