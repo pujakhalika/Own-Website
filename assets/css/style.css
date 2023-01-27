@@ -340,16 +340,93 @@ img {
       grid-template-columns: -webkit-max-content;
       grid-template-columns: max-content;
   row-gap: 1rem;
+  top: 50%;
+  left: 50%;
+}
+
+.home__social .home__social-icon {
+  list-style: none;
 }
 
 .home__social-icon {
-  font-size: 1.25rem;
-  color: var(--first-color);
+  font-size: 1rem;
 }
 
-.home__social-icon:hover {
-  color: var(--first-color-alt);
+
+
+.home__social .home__social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
 }
+
+.home__social .home__social-icon .icon {
+  position: relative;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+.home__social .home__social-icon:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+
+.home__social .home__social-icon:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(104, 40, 40);
+  transition: .5s;
+  z-index: 2;
+}
+
+.home__social .home__social-icon:hover:before {
+  top: 0;
+}
+
+#home__social #home__social-icon:nth-child(1) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(2) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(3) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(4) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(5) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(6) .icon:before {
+  background: #000000;
+}
+
+#home__social #home__social-icon:nth-child(7) .icon:before {
+  background: #000000;
+}
+
 
 .home__blob {
   width: 200px;
